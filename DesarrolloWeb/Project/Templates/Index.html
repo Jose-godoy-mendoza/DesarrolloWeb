@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Inicio</title>
+</head>
+{% if request.session.password %}
+{{ request.session.password}} &nbsp;&nbsp; <a href="{% url 'Login' %}">Cerrar Sesion</a>
+{% else %}
+<body>
+    <h1>Pagina Index</h1>
+    <a href="{% url 'Login' %}"> Login </a>
+    <a href=""> Test </a>
+</body>
+
+{% endif %}
+</html>
